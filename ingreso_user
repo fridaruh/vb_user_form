@@ -1,0 +1,30 @@
+Private Sub btnIngre_Click()
+
+Dim user, contraseña As String
+
+user = txtUser.Text
+contraseña = txtContra.Text
+
+If Trim(txtUser) = "" Then
+    MsgBox "Ingrese Usuario, intente de nuevo", vbExclamation, "Alerta"
+    txtUser.SetFocus
+    Exit Sub
+End If
+
+If Trim(txtContra) = "" Then
+    MsgBox "Ingrese Contraseña", vbExclamation, "Alerta"
+    txtContra.SetFocus
+    Exit Sub
+End If
+If Trim(txtUser.Text) = "admin" And Trim(txtContra.Text) = "12345" Then
+    MsgBox ("Acceso correcto"), vbInformation, "Ok"
+    Application.Visible = True
+    End
+Else
+    MsgBox ("Las credenciales ingresadas son incorrectas, intente de nuevo"), vbExclamation, "Alerta"
+    End If
+End Sub
+Private Sub btnCan_Click()
+Unload.me
+End Sub
+
